@@ -1,0 +1,191 @@
+/* Enhanced Index Page Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f5f7;
+  color: #2d3436;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Enhanced Navbar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #00bfa6;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #2d3436;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bfa6;
+}
+
+/* Enhanced Jumbotron */
+.jumbotron {
+  background: linear-gradient(135deg, #00bfa6 50%, #ffffff 50%);
+  color: #ffffff;
+  padding: 80px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+  animation: pulse 10s infinite alternate;
+  transform: translateX(-50%);
+}
+
+@keyframes pulse {
+  from {
+      transform: translateX(-50%) scale(1);
+  }
+  to {
+      transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #00bfa6;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  color: #2d3436;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #636e72;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Enhanced Buttons */
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #00bfa6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #00a896;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #2d3436;
+}
+
+.btn-secondary:hover {
+  background-color: #d0d0d0;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  color: #636e72;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .jumbotron {
+      padding: 40px 20px;
+  }
+
+  .jumbotron h1 {
+      font-size: 2.8rem;
+  }
+
+  .card-title {
+      font-size: 1.5rem;
+  }
+}
